@@ -1514,7 +1514,7 @@ function updateMissionGate(stats){const el=document.getElementById('mission-gate
             let activeWps = [...waypointsList];
 
             if (mode === 'abort' && activeWps.length > 0) {
-                const origin = activeWps[activeWps.length - 1];
+                const origin = [...activeWps].reverse().find(w => w.type !== 'hab') || activeWps[activeWps.length - 1];
                 const originGrid = latLonToGrid(origin.lat, origin.lon);
                 const reachable = SAFE_HAVENS.map(h => {
                     const targetGrid = latLonToGrid(h.lat, h.lon);
@@ -2499,8 +2499,10 @@ function updateMissionGate(stats){const el=document.getElementById('mission-gate
             const baseline=computeFullRouteForMode(evaWaypoints,'safety');
             const fixtureDuration=baseline.durationMin+480;
             check(4,fixtureDuration>420 && baseline.durationMin>=0,'Explicit 480-minute simulated science delay breaches the 420-minute planning threshold');
+            const abortOrigin=[...evaWaypoints].reverse().find(w=>w.type!=='hab');
             const abort=computeFullRouteForMode(evaWaypoints,'abort');
-            check(5,!abort.infeasible && abort.cells.length>1 && abort.distKm>0 && abort.maxSlope<=20,'Illustrative abort route is feasible on measured terrain (shelter not verified)');
+            const abortValid=!!abortOrigin && !abort.infeasible && abort.cells.length>1 && abort.distKm>0 && abort.maxSlope<=20;
+            check(5,abortValid,abortValid?'Measured-terrain route from last science stop to illustrative habitat is feasible (not a certified shelter)':'No feasible measured-terrain route from last science stop to illustrative habitat; inspect terrain or select another destination');
             const mineralUnmeasured=terrainGrid.every(row=>row.every(c=>c.mineral==='Unmeasured (CRISM pending)'));
             check(6,mineralUnmeasured && !!REAL_OPTICAL && REAL_BOUNDS.north>REAL_BOUNDS.south,'CRISM is explicitly unavailable and HiRISE optical evidence is embedded');
             const count=checks.filter(Boolean).length;
