@@ -41,28 +41,7 @@
 3. Open `nasaapp.html` directly in your browser or serve locally:
    ```bash
    npx http-server
-🔬 Automated Verification Test Suite
-AresNav includes an embedded automated test suite to verify system resilience:
 
-TC-01: Invalid Coordinate Bounds Parser
-
-TC-02: API Outage & PDS Failover Engine
-
-TC-03: Steep Cliff Route Failure & Scarp Avoidance
-
-TC-04: PLSS 480-Min Redline Alarm
-
-TC-05: DONKI SEP Radiation Storm Abort
-
-TC-06: CRISM Mineral Verification Matrix
-
-🛡️ Defensive Engineering & Data Provenance
-AresNav is a research prototype for demonstration purposes. While integrating real NASA catalog references (Mars Trek, MRO HiRISE, MRO CRISM, Perseverance Traverse, and CCMC DONKI), local elevation profiles, mineral polygons, and life-support calculations utilize sampled datasets and illustrative modeling parameters. Always review data provenance and citations within the console before mission planning.
-
-Explore Jezero. Return safely. — Team XTerrestrial
-
-
----
 
 ### **Immediate Execution Checklist**
 1. Navigate to your GitHub repository (`xtraterrestrial`).
