@@ -21,11 +21,11 @@ AresNav is a high-impact, web-based mission control console engineered to plan, 
     2. *Max Astrobiology Science Yield:* Pulls trajectories through high-priority CRISM-inspired carbonate and smectite clay units.
     3. *Shortest Euclidean Distance:* Direct point-to-point vector navigation (exposing steep terrain fall hazards).
     4. *Emergency Walk-Back Abort:* Computes the minimum-energy return vector to the nearest safe haven or habitat.
-  * Includes a real-time **Route Strategy Trade-off Analysis** table comparing distance, max slope, $\text{O}_2$ burn, and science points.
+  * Includes a real-time Route Strategy Trade-off Analysis table comparing distance, max slope, $\text{O}_2$ burn, and science points.
 
 * **🫁 Closed-Loop xEMU PLSS Life Support:**
   * Real-time physiological telemetry calculator tracking metabolic rates ($\dot{Q}_{\text{met}}$), primary and reserve oxygen consumption ($1.65\text{ kg}$ capacity), $\text{CO}_2$ amine scrubber margins, suit Li-Ion battery drain ($2,100\text{ Wh}$), and cumulative radiation dose.
-  * Built-in mandatory **60-minute walk-back contingency reserve** enforcing a $420$-minute safe duration cap.
+  * Built-in mandatory 60-minute walk-back contingency reserve enforcing a $420$-minute safe duration cap.
 
 * **⚡ NASA DONKI Space Weather & MEDA Integration:**
   * Dynamic environmental anomaly injector to stress-test crew survivability against live CCMC DONKI Solar Energetic Particle (SEP) storms and regional dust storms ($\tau = 2.1$).
@@ -74,4 +74,4 @@ The built-in test runner verifies core system resilience across 6 key scenarios:
 
 ---
 
-*Explore Jezero. Return safely.* — **Team XTerrestrial**
+*Explore Jezero. Return safely.* — Team XTerrestrial
