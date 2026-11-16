@@ -1,4 +1,4 @@
-# AresNav: Martian EVA & Surface Operations Console 🚀
+# AresNav🚀
 
 **Team Name:** Team XTerrestrial  
 **Event:** NASA Space Apps Challenge 2026  
