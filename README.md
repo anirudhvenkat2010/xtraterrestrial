@@ -9,7 +9,7 @@
 
 ## 🌌 Mission Overview
 
-**AresNav** is a high-impact, web-based mission control console engineered to plan, simulate, and stress-test human Extravehicular Activities (EVAs) on Mars. Designed specifically for the NASA Space Apps Challenge, AresNav fuses authentic NASA orbital data, topographic Digital Elevation Models (DEMs), and closed-loop life-support physics. It empowers astronauts and mission operators to investigate astrobiological targets while dynamically identifying and bypassing terrain traps and environmental hazards.
+AresNav is a high-impact, web-based mission control console engineered to plan, simulate, and stress-test human Extravehicular Activities (EVAs) on Mars. Designed specifically for the NASA Space Apps Challenge, AresNav fuses authentic NASA orbital data, topographic Digital Elevation Models (DEMs), and closed-loop life-support physics. It empowers astronauts and mission operators to investigate astrobiological targets while dynamically identifying and bypassing terrain traps and environmental hazards.
 
 ---
 
